@@ -1,0 +1,100 @@
+{% load static %}
+{% block main_page %}
+    <main id="constructor" class="main">
+
+        <div class="pagetitle">
+            <h1>Your projects list</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Your projects</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section dashboard">
+
+            <!-- Left side columns -->
+            <div class="row">
+                <!-- New bot Card -->
+                <div class="col-12">
+
+                    <div class="card info-card revenue-card">
+                        <div class="filter">
+                            <a class="icon" href="#"><i class="bi bi-trash"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Actions</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                <li><a class="dropdown-item" href="#">Remove</a></li>
+                            </ul>
+                        </div>
+                        <a href="new_bot">
+                            <div class="card-body mt-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>Create New Bot</h6>
+                                        <span
+                                                class="text-muted small pt-2 ps-1">Here you can create a new chatbot for Telegram,
+                                            WhatsApp, VK or Viber messanger!</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Revenue Card -->
+            <div class="row">
+                <div class="col-xxl-4 col-xl-6 col-md-12">
+                    <div class="card info-card revenue-card">
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Actions</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                <li><a class="dropdown-item" href="#">Remove</a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                            <div class="card-body">
+                                <p class="card-title"></p>
+
+                                <div class="d-flex align-items-center">
+                                    <img src="{% static 'img/profile-img.jpg' %}" alt="Profile" class="rounded-circle">
+                                    <div class="ps-3">
+                                        <h5>@hollywood_test_bot</h5>
+                                        <div class="px-1">
+                                            <i class="bi bi-person-check icon_not_hover"></i>
+                                            <span class="text-body bold small my-0">Subscribers: 200 KK</span>
+                                        </div>
+
+                                        <span
+                                                class="text-muted small">This is a test bot for operating holywood celebrities operating</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div><!-- End Revenue Card -->
+
+            </div>
+
+
+        </section>
+
+    </main><!-- End #main -->
+{% endblock main_page %}
