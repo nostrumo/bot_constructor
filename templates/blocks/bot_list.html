@@ -17,20 +17,9 @@
             <!-- Left side columns -->
             <div class="row">
                 <!-- New bot Card -->
-                <div class="col-12">
+                <div class="col-xxl-4 card_bot col-xl-6 col-md-12">
 
-                    <div class="card info-card revenue-card">
-                        <div class="filter">
-                            <a class="icon" href="#"><i class="bi bi-trash"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Actions</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Remove</a></li>
-                            </ul>
-                        </div>
+                    <div class="card  info-card revenue-card">
                         <a href="new_bot">
                             <div class="card-body mt-4">
                                 <div class="d-flex align-items-center">
@@ -40,7 +29,7 @@
                                     <div class="ps-3">
                                         <h6>Create New Bot</h6>
                                         <span
-                                                class="text-muted small pt-2 ps-1">Here you can create a new chatbot for Telegram,
+                                                class="text-muted small pt-2">Here you can create a new chatbot for Telegram,
                                             WhatsApp, VK or Viber messanger!</span>
 
                                     </div>
@@ -51,46 +40,76 @@
                     </div>
 
                 </div>
+                <h3 class="my-2">Your previous bots</h3>
             </div>
             <!-- End Revenue Card -->
             <div class="row">
-                <div class="col-xxl-4 col-xl-6 col-md-12">
-                    <div class="card info-card revenue-card">
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Actions</h6>
-                                </li>
+                {% for bot in bots %}
+                    <div class="col-xxl-4 card_bot col-xl-6 col-md-12">
+                        <div class="card info-card revenue-card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Actions</h6>
+                                    </li>
 
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Remove</a></li>
-                            </ul>
-                        </div>
-                        <a href="#">
+                                    <li><a class="dropdown-item" href="/edit/{{ bot.id }}">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                            {#                            <p class="card-title"></p>#}
+
+
                             <div class="card-body">
-                                <p class="card-title"></p>
+                                <a href="/project/{{ bot.id }}">
+                                    <div class="d-flex mt-3 align-items-center justify-content-start bot-title">
+                                        <h5>@{{ bot.name }}</h5>
+                                        <i class="bi bi-telegram mx-2"></i>
+                                    </div>
+                                </a>
 
-                                <div class="d-flex align-items-center">
-                                    <img src="{% static 'img/profile-img.jpg' %}" alt="Profile" class="rounded-circle">
-                                    <div class="ps-3">
-                                        <h5>@hollywood_test_bot</h5>
-                                        <div class="px-1">
-                                            <i class="bi bi-person-check icon_not_hover"></i>
-                                            <span class="text-body bold small my-0">Subscribers: 200 KK</span>
+                                <div class=" mt-3 d-flex justify-content-between align-items-start">
+                                    {#                                    <a href="project/{{ bot.id }}">#}
+                                    <div class="d-flex align-items-start">
+                                        <img src="{% static 'img/profile-img.jpg' %}" alt="Profile"
+                                             class="rounded-circle">
+                                        <div class="ps-3">
+                                            <div class="subscribers">
+                                                <i class="bi bi-person-check icon_not_hover"></i> <span
+                                                    class="text-muted">Subscribers:</span>
+                                                <span class="text-body bold small my-0">{{ bot.metadata.subscribers }}</span>
+                                            </div>
+
+                                            <span
+                                                    class="text-muted small">{{ bot.description }}</span>
+
                                         </div>
+                                    </div>
+                                    {#                                    </a>#}
+                                    <div class="left_info">
+                                        <div class="d-flex align-items-center text-muted small justify-content-end">
+                                            Online
+                                            <div class="switch-btn mx-2"></div>
 
-                                        <span
-                                                class="text-muted small">This is a test bot for operating holywood celebrities operating</span>
+                                        </div>
+                                        <div class="mt-1 d-flex align-items-center text-muted small justify-content-end">
+                                            Bot URL
+                                            <a class="mx-2 url_type d-flex align-items-center justify-content-center"
+                                               href="#"><i
+                                                    class="bi bi-link"></i></a>
+                                            {#                                                <a class="d-flex url_type align-items-center justify-content-center"#}
+                                            {#                                                   href="#"><i#}
+                                            {#                                                        class="bi bi-qr-code"></i></a>#}
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </a>
 
-                    </div>
-                </div><!-- End Revenue Card -->
-
+                        </div>
+                    </div><!-- End Revenue Card -->
+                {% endfor %}
             </div>
 
 

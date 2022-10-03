@@ -1,0 +1,345 @@
+.dotted {
+    border: 1px dashed;
+    border-color: #afafaf;
+    background-color: transparent;
+}
+
+.filled {
+    border: 1px solid;
+    border-color: #afafaf;
+    background-color: transparent;
+}
+
+.input_constructor {
+    max-height: 22px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.editable-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card_size {
+    width: 500px;
+}
+
+.radius-5 {
+    border-radius: 5px
+}
+
+.block-action {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: #f3f3f3;
+    font-family: "Poppins", sans-serif;
+}
+
+.emoji {
+    border-radius: 100px;
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+    margin: 10px;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.user_emoji {
+    background-color: #6a7cb6;
+
+}
+
+.bot_emoji {
+    background-color: #986fb9;
+
+}
+
+.emoji img {
+    width: 22px;
+}
+
+.block-action-bot {
+    border-radius: 10px 10px 10px 0px;
+    max-width: 385.5px;
+
+
+}
+
+.block-action-user {
+    border-radius: 10px 10px 0px 10px;
+    /*border-radius: 10px 10px 10px 0px;*/
+    max-width: 385.5px;
+
+}
+
+
+.block-action .action_title {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    font-weight: 500;
+
+
+}
+
+.block-action .action_body {
+    font-size: 16px;
+    padding: 1rem;
+    padding-top: 0;
+    font-weight: 50;
+}
+
+.block-action .text-field {
+    padding-left: 1.5rem;
+
+}
+
+.block-action .action_body .additional_info {
+    font-size: 14px;
+    padding-top: 1rem;
+    font-weight: 50;
+}
+
+
+.info_icon {
+    font-size: 14px;
+    color: #969696;
+    /*background-color: #dedede;*/
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+    margin: 0.2rem;
+}
+
+.info_icon:hover {
+    font-size: 14px;
+    color: #646464;
+    background-color: rgba(121, 121, 121, 0.24);
+    /*height: 32px;*/
+    /*width: 32px;*/
+    border-radius: 100px;
+    transition: 0.3s
+
+    /*margin: 0.2rem;*/
+}
+
+.delimiter {
+    border-bottom: #e1e1e1 dotted;
+    margin-bottom: 1rem;
+}
+
+.block-action .action_body .intent-element {
+    font-size: 14px;
+    padding: 1rem;
+    font-weight: 50;
+    background-color: #fff;
+}
+
+.block-action .action_body .additional_info_list {
+    text-decoration: underline dotted;
+}
+
+.block-action .action_body .intent-element .intent-content {
+    margin-right: 1rem;
+}
+
+.add_screen {
+    width: 100px;
+    writing-mode: vertical-rl;
+}
+
+
+.add_screen .card-icon {
+    font-size: 22px;
+    line-height: 0;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 1rem;
+}
+
+.button_block {
+    /*position: fixed;*/
+    z-index: 993;
+    /*box-shadow: 0px 2px 20px rgb(1 41 112 / 10%);*/
+    /*padding-left: 20px;*/
+    /*right: 15px;*/
+    /*bottom: 15px;*/
+}
+
+.button_block button {
+    border-radius: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+.button_block #button_fixed_add {
+    position: fixed;
+    z-index: 993;
+    right: 15px;
+    bottom: 15px;
+}
+
+.button_block #button_fixed_start {
+    position: fixed;
+    z-index: 993;
+    right: 15px;
+    bottom: 85px;
+}
+
+@media (min-width: 800px) {
+    .button_block button .hide_sm {
+        /*display: flex;*/
+    }
+}
+
+.box_text {
+    font-size: 16px;
+    padding-left: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .button_block button .hide_sm {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .emoji {
+        display: none;
+    }
+
+    .block-action-bot {
+        border-radius: 10px 10px 10px 10px;
+        max-width: 100%;
+
+
+    }
+
+    .block-action-user {
+        border-radius: 10px 10px 10px 10px;
+        min-width: 436px;
+        align-items: flex-end !important;
+        justify-content: flex-start !important;
+
+    }
+
+    .action_block {
+        max-width: 436px;
+    }
+}
+
+.keyboard {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+.keyboard div {
+    font-size: 14px;
+    text-align: end;
+    padding-bottom: 0.5rem;
+}
+.keyboard input {
+    width: 100%;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: -3px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #bfbfbf;
+  border: 3px solid rgba(1, 1, 1, 0.1);
+  border-radius: 25px;
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: 0px;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 26px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #cccccc;
+}
+input[type=range]::-moz-range-track {
+  background: #bfbfbf;
+  border: 3px solid rgba(1, 1, 1, 0.1);
+  border-radius: 25px;
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 26px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 0 0;
+  color: transparent;
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #bfbfbf;
+  border: 3px solid rgba(1, 1, 1, 0);
+  border-radius: 50px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #bfbfbf;
+  border: 3px solid rgba(1, 1, 1, 0);
+  border-radius: 50px;
+}
+input[type=range]::-ms-thumb {
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 26px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #bfbfbf;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #bfbfbf;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}

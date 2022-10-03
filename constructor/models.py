@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
+import datetime
 import uuid
 
 
@@ -26,12 +27,24 @@ class TagList(models.Model):
     def __str__(self):
         return self.tag_name
 
+class ClickList(models.Model):
+    click_type = models.CharField(max_length=20)
+    click_source = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.tag_name
+
 
 class MetaData(models.Model):
-    subscribers = models.IntegerField()
-    files = models.IntegerField()
-    activity = models.IntegerField()
-    left_subscribers = models.IntegerField()
+    subscribers = models.IntegerField(blank=True,default=0)
+    files = models.IntegerField(blank=True,default=0)
+    sessions = models.IntegerField(blank=True,default=0)
+    messages = models.IntegerField(blank=True,default=0)
+    status = models.BooleanField(blank=True,default=False)
+    activity = models.IntegerField(blank=True,default=0)
+    left_subscribers = models.IntegerField(blank=True,default=0)
+
+    dialogue_length = models.IntegerField(blank=True,default=0)
 
 
 
@@ -44,6 +57,7 @@ class Bots(models.Model):
     tags = models.ForeignKey(TagList, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
     metadata = models.OneToOneField(MetaData, on_delete=models.CASCADE)
+    payment = models.DateTimeField(default=datetime.datetime.now())
 
     def publish(self):
         self.published_date = timezone.now()
