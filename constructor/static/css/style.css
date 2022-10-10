@@ -8,6 +8,34 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 1 */
+    line-height: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+select::-ms-expand {
+    display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent
+}
+
 :root {
     scroll-behavior: smooth;
 }
@@ -161,7 +189,7 @@ h6 {
 }
 
 .card_bot {
-    max-width: 600px;
+    max-width: 650px;
 }
 
 @media (min-width: 768px) {
@@ -1708,12 +1736,13 @@ h6 {
     border-radius: 100px;
     margin: 0.2rem;
 }
-.text-body{
+
+.text-body {
     font-size: 18px;
     font-weight: 600;
 }
 
-.subscribers .text-muted{
+.subscribers .text-muted {
     font-size: 14px;
 }
 
@@ -1729,10 +1758,68 @@ h6 {
     /*margin: 0.2rem;*/
 }
 
-.left_info{
+.left_info {
     margin-left: 1rem;
 }
 
-.bot-title i{
+.bot-title i {
     color: #444444;
+}
+
+.editable_modal .button-icon {
+    color: #8f8f8f;
+    background: #ffffff;
+}
+
+.button-icon {
+    font-size: 20px;
+    line-height: 0;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.modal-header {
+    font-size: 28px;
+    border-bottom: none;
+    color: #012970;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+.modal-body {
+
+}
+
+.modal-footer {
+    border-bottom: none;
+
+
+}
+
+.scrollable{
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*min-height: 100px;*/
+    scrollbar-gutter: stable;
+}
+.scrollable::-webkit-scrollbar-track {
+    background-color: rgba(238, 238, 238, 0);
+}
+.scrollable::-webkit-scrollbar-track:hover {
+    background-color: rgba(238, 238, 238, 0.10);
+}
+.scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: rgba(129, 129, 129, 0.25);
+    border-radius: 100px;
+}
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(129, 129, 129, 0.4);
+    border-radius: 100px;
 }

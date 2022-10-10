@@ -14,8 +14,22 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <script src="{% static 'vendor/jquery/jquery-3.6.1.min.js' %}"></script>
+    {{ form_data | json_script:"form-data" }}
+
+    <script src="{% static 'js/modules/html_element/card_elements.js' %}"></script>
+    <script src="{% static 'js/modules/html_element/textfield_elements.js' %}"></script>
+    <script src="{% static 'js/modules/html_element/variable_elements.js' %}"></script>
+    <script src="{% static 'js/modules/html_element/keyboard_elements.js' %}"></script>
+
+    <script src="{% static 'js/element_generator.js' %}"></script>
+
+
+    <script src="{% static 'js/modules/JSON_prepare.js' %}"></script>
+
+    <script src="{% static 'js/custom.js' %}"></script>
     <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -30,6 +44,7 @@
     <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -43,7 +58,7 @@
     ======================================================== -->
 </head>
 
-<body>
+<body class="scrollable">
 
 {% include "blocks/sidebar_menu_conf.html" %}
 {% include "blocks/header.html" %}
@@ -52,10 +67,9 @@
 {% include "blocks/bot_constructor.html" %}
 
 
-
 <!-- Vendor JS Files -->
 <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+{#    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>#}
 <script src="{% static 'vendor/chart.js/chart.min.js' %}"></script>
 <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
 <script src="{% static 'vendor/quill/quill.min.js' %}"></script>
