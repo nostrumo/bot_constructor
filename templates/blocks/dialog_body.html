@@ -1,0 +1,414 @@
+<div class="dashboard-wrapper">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="row left-menu">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="vertical_list d-flex flex-column">
+                                <div class="left-menu-element active">
+                                    <a class="sidebar-link   show_setting d-flex align-items-center justify-content-between">
+                                        <span>Основные настройки</span>
+                                    </a>
+
+                                </div>
+                                <div class="left-menu-element ">
+                                    <a class="sidebar-link  show_setting d-flex align-items-center justify-content-between">
+                                        <span>Настройка доступа</span>
+                                    </a>
+                                </div>
+                                <div class="left-menu-element">
+                                    <a class="sidebar-link  show_setting d-flex align-items-center justify-content-between">
+                                        <span>Уведомления</span>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <div class="hover_btn">
+                                                <i class="bi bi-x-lg"></i>
+                                            </div>
+                                            <div class="hover_btn">
+                                                <i class="bi bi-clipboard2"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="left-menu-element">
+                                    <a class="sidebar-link  show_setting d-flex align-items-center justify-content-between">
+                                        <span>Web hook</span>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <div class="hover_btn">
+                                                <i class="bi bi-x-lg"></i>
+                                            </div>
+                                            <div class="hover_btn">
+                                                <i class="bi bi-clipboard2"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link-card card my-3">
+                        <div class="card-body">
+                            <div class="vertical_list d-flex flex-column">
+                                <div class="left-menu-element link-list active">
+
+                                    <span>Ссылка общая</span>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div><a href="https://t.me/testGPNbot">Ссылка</a></div>
+                                        <div><a class="copy"><i class="bi bi-clipboard"></i></a></div>
+                                    </div>
+
+                                </div>
+                                <div class="left-menu-element link-list">
+
+                                    <span>Ссылка альтернативная</span>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div><a href="https://t.me/testGPNbot">Ссылка</a></div>
+                                        <div><a class="copy"><i class="bi bi-clipboard"></i></a></div>
+                                    </div>
+                                </div>
+                                <div class="left-menu-element link-list">
+
+                                    <span>Ссылка на открытие в Telegram</span>
+                                    <div class="d-flex align-items-center justify-content-between">
+
+                                        <div><a href="https://t.me/testGPNbot">Ссылка</a></div>
+                                        <div><a class="copy"><i class="bi bi-clipboard"></i></a></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="right-menu hide-sm">
+                <div class="modal_bg-sm"></div>
+                <div class="screen-content">
+                    <div id="notification_settings" class="card">
+                        <div class="card-header">
+                            <h5>Настройка уведомлений</h5>
+                            <span class="description">Выберите какие уведомления вы хотите получать в Личном кабинете конструктора, какие в Telegram, и какие по электронной почте указанной при регистрации.</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex notifi_header align-items-center justify-content-end">
+                                <div class="setting_choice"><i class="bi bi-house"></i></div>
+                                <div class="setting_choice"><i class="bi bi-telegram"></i></div>
+                                <div class="setting_choice"><i class="bi bi-envelope"></i></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Пост отправлен</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Пост отправлен</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Получен платеж</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Оформлен заказ в магазине</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Товара осталось мало</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Пост добавлен в очередь</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="overall_settings" class="card">
+                        <div class="card-header">
+                            <h5>Настройки внешнего вида бота</h5>
+                            <span class="description">Все настройки из данного блока изменяются только через официального бота @BotFather —
+                                        <span class="css_StyleText12 style_cursor">
+                                        <a href="tg://resolve?domain=BotFather" class="css_link botLink_other_country_a"
+                                           target="_blank">Открыть @BotFather</a>
+                                    </span> или                                        <span
+                                        class="css_StyleText12 style_cursor">
+                                            <a href="#" class="css_link" target="_blank">Открыть инструкцию</a>
+                                        </span>
+                                    </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="gradient gradient-big my-3 mx-3">
+                                    <span class="icon-text">AU</span>
+                                </div>
+                                <div class="">
+                                    <div class="bot_name">
+                                        <span class="bot_link">@audio_recorder_bot</span>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <a class="just_link">Как изменить настройки?</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div>
+                                <span class="setting_choice_text">Описание</span>
+                                <span class="setting_choice_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a lectus libero. Proin justo metus, suscipit id quam lacinia, maximus pulvinar orci. Proin sed dui ac felis maximus auctor. Nam eu felis suscipit elit aliquet consequat. </span>
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <h5>Основные настройки</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Статус работы</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <div class="status online px-2">
+                                        Активен
+                                    </div>
+                                    <div class="setting_choice">
+                                        <div class="btn-online">
+                                            <label class="form-switch">
+
+
+                                                <input type="checkbox" checked="">
+
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Ключ API</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <input placeholder="1632111300:AAEX**************************" class="px-2">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="setting_choice_text">Язык</div>
+                                <div class="d-flex align-items-center justify-content-end selectors">
+                                    <a>Английский</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,153 @@
+<div class="dashboard-wrapper">
+    <div class="d-flex align-items-center">
+        <a data-hide="active_mailing" class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="my-3 ps-2">Активные рассылки</h4>
+    </div>
+    <div id="active_mailing" class="row">
+        {% for mail in mails %}
+
+            {% if mail.is_past_due_status %}
+                <div class="col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto py-3">
+                    <a href="./message-{{ mail.uuid }}">
+                        <div class="card mailing h-100">
+                            <div class="card-header no_color">
+                                <div class="d-flex align-items-start justify-content-between">
+                                    <div>
+                                        <h5>{{ mail.name }}</h5>
+                                        <p class="additional-header">{{ mail.status }}</p>
+
+                                    </div>
+                                    <div class="filter"><a class="icon just_link" href="#" data-bs-toggle="dropdown"><i
+                                            class="bi bi-three-dots"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                            <li><a class="dropdown-item sm-menu" href="#"> <i
+                                                    class="bi bi-clipboard pe-2"></i>Копировать</a>
+                                            </li>
+                                            <li><a class="dropdown-item sm-menu remove-item" href="#"><i
+                                                    class="bi bi-trash pe-2"></i>Удалить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <span class="additional-info">Дата старта</span>
+                                        <span>{{ mail.start_date|date:"j M Y" }}</span>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="additional-info">Время старта</span>
+                                        <span>{{ mail.start_date|date:"G:i" }}</span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto  py-3">
+            <a href="{% url 'new_mailling' bot.id %}">
+                <div id="new-mailing" class="card pointer mailing relative">
+                    <div class="rght_card_bg2"></div>
+
+                    {#                    </div>#}
+                    <div class="card-body p-0 ">
+                        <div class="background_text">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="description  ms-3">
+                                    <div class="">
+
+                                        <span class=" description bot_link ps-1 uppercase">новая рассылка</span>
+                                    </div>
+
+                                </div>
+
+                                <div class=" d-flex align-items-center justify-content-end ">
+                                        <span class=" description  nav-link-icon">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+    <div class="d-flex align-items-center">
+        <a data-hide="prev_mailing" class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="my-3 ps-2">Выполненные рассылки</h4>
+    </div>
+
+    <div id="prev_mailing" class="row">
+        {% for mail in mails %}
+
+            {% if not mail.is_past_due_status %}
+                <div class="col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto py-3">
+                    <a href="./message-{{ mail.uuid }}">
+                        {% if mail.status == 'Отправлено' %}
+                            <div class="card mailing card_success h-100">
+                        {% elif mail.status == 'Ошибка' %}
+                            <div class="card mailing card_error h-100">
+                        {% else %}
+                            <div class="card mailing h-100">
+                        {% endif %}
+                        <div class="card-header no_color">
+                            <div class="d-flex align-items-start justify-content-between">
+                                <div>
+                                    <h5>{{ mail.name }}</h5>
+                                    <p class="additional-header">{{ mail.status }}</p>
+
+                                </div>
+                                <div class="filter"><a class="icon just_link" href="#"
+                                                       data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li><a class="dropdown-item sm-menu" href="#"> <i
+                                                class="bi bi-clipboard pe-2"></i>Копировать</a>
+                                        </li>
+                                        <li><a class="dropdown-item sm-menu remove-item" href="#"><i
+                                                class="bi bi-trash pe-2"></i>Удалить</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <span class="additional-info">Дата старта</span>
+                                    <span>{{ mail.start_date|date:"j M Y" }}</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="additional-info">Время старта</span>
+                                    <span>{{ mail.start_date|date:"G:i" }}</span>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+</div>

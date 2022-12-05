@@ -1,0 +1,786 @@
+<div class="dashboard-wrapper">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="row left-menu">
+                <div class="col-12  mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="vertical_list d-flex flex-column">
+                                <div class="left-menu-element bottom_border">
+                                    <div class="sidebar_div show_setting">
+                                        <div>
+                                            <span>Время рассылки</span>
+
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between flex-row flex-lg-column flex-md-column flex-xl-row  ">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <i class="bi mx-2 bi-calendar"></i>
+                                                <input class="date-picker date-time-selector" placeholder="Дата">
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <i class="bi mx-2 bi-clock"></i>
+                                                <input class="time-picker date-time-selector" placeholder="Время">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="left-menu-element bottom_border">
+                                    <div class="sidebar_div show_setting d-flex flex-column align-items-start justify-content-start">
+                                        <span>Адресаты</span>
+                                        <div class="text_side">
+                                            Пользователи
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="left-menu-element">
+                                    <div class="sidebar_div show_setting d-flex flex-column align-items-start justify-content-start">
+                                        <span>Статус</span>
+                                        <span class="text_side">Черновик</span>
+
+                                    </div>
+                                </div>
+                                <div class="add_button add_action my-1 button-text">
+                                    <i class="bi bi-gear"></i>
+                                    <span>Действия</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  mb-3">
+                    <div class="card-btn pointer">
+                        <div class="card_bg">
+                            <h5>Логические блоки</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="right-menu {#hide-sm#}">
+                <div class="modal_bg-sm"></div>
+
+                <div class="screen-footer">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="save-screen fixed_btn icon-mute icon-mute-hover d-flex align-items-center justify-content-center">
+                            <i class="bi bi-chevron-left"></i>
+                            <span class="text-btn  ps-2">Вернуться</span>
+                        </div>
+                        <div class="come-back fixed_btn icon-success icon-success-hover d-flex align-items-center justify-content-center">
+                            <span class="text-btn pe-2">Сохранить и вернуться</span>
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen-content">
+                    <div class="screen-header">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <input id="screen_header" class="input_header" value="Новый экран">
+                            <div class="dropdown select_block">
+                                <a class="nav-link nav-link-icon" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false"><i class="far fa-plus"></i></a>
+                                <ul class="dropdown-menu select_block constructor_blocks">
+                                    <li>
+                                        <a class="dropdown-item add_text_btn d-flex align-items-center justify-content-start"
+                                           href="#">
+                                            <div class="notification-icon icon-mute me-3">
+                                                <i class="bi bi-justify-left"></i>
+                                            </div>
+                                            <span>Текстовый блок</span>
+
+                                        </a>
+                                    </li>
+                                    <li class="hidden">
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between add_file_btn"
+                                           href="#">
+                                            <span>Файл</span>
+                                            <i class="bi bi-paperclip"></i>
+
+                                        </a>
+                                    </li>
+                                    <li class="hidden">
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                           href="#">
+                                            <span>Корзина</span>
+                                            <i class="bi bi-paperclip"></i>
+
+                                        </a>
+                                    </li>
+                                    <li class="hidden">
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                           href="#">
+                                            <span>Геолокация</span>
+                                            <i class="bi bi-paperclip"></i>
+
+                                        </a>
+                                    </li>
+                                    <li class="hidden">
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                           href="#">
+                                            <span>Корзина</span>
+                                            <i class="bi bi-paperclip"></i>
+
+                                        </a>
+                                    </li>
+                                    <li class="hidden">
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                           href="#">
+                                            <span>Товар</span>
+                                            <i class="bi bi-paperclip"></i>
+
+                                        </a>
+                                    </li>
+                                    <li class="hidden">
+                                        <a class="dropdown-item d-flex align-items-center justify-content-start add_keyboard_btn"
+                                           href="#">
+                                            <div class="notification-icon icon-mute me-3">
+                                                <i class="bi bi-view-stacked"></i>
+                                            </div>
+                                            <span>Клавиатура</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-start add_image_btn"
+                                           href="#">
+                                            <div class="notification-icon icon-mute me-3">
+                                                <i class="bi bi-paperclip"></i>
+                                            </div>
+                                            <span>Изображение</span>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="screen_elements" class="screen-body">
+                        <div class="card_field collapsed may_remove">
+                            <div class="card-header card-collapse text_card">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <i class="fa-regular fa-comment"></i>
+                                        <span>Текст (шаблон)</span>
+                                    </div>
+                                    <a class="nav-link nav-link-icon remove">
+                                        <i class="fa-regular fa-x"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="card-body collapse-div">
+                                <div class="pb-2">
+                                    <div class="textfield_block">
+                                        <div class="d-flex align-items-center may_remove">
+                                            <div data-placeholder="Введите сообщение бота" class="bot_text"
+                                                 contenteditable="true" style="outline:0px;"></div>
+                                            <a class="nav-link nav-link-icon remove">
+                                                <i class="bi bi-x-lg"></i>
+
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="placeholder_block">
+                                        <div class="d-flex align-items-center justify-content-center w-100 h-100">
+                                            <p class="m-0">Добавьте одно или несколько текстовых полей
+                                            <p>
+                                        </div>
+                                    </div>
+                                    <div class="add_button add add_textfield my-1 button-text d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-plus"></i>
+                                        <span>Добавить текст</span>
+                                    </div>
+                                </div>
+
+                                <span class="additional-info">Текстовые сообщения будут выводиться в случайном порядке</span>
+
+                            </div>
+                            <div class="card-footer advanced-settings collapse-div ">
+                                <div class="card-action collapse_near d-flex align-items-center justify-content-center">
+                                    <i class="rot_icon bi bi-chevron-down py-1 pe-2"></i>
+                                    Расширенные настройки
+                                </div>
+                                <div class="collapse-entry hidden">
+
+
+                                </div>
+
+                            </div>
+                            <div class="card-footer collapse-div card_round">
+                                <div class="card-action collapse_near d-flex align-items-center justify-content-center">
+                                    <i class="rot_icon bi bi-chevron-down py-1 pe-2"></i>
+                                    Добавить свою клавиатуру
+                                </div>
+                                <div class="collapse-entry hidden">
+                                    <div class="inline-keyboards">
+                                        <div class="may_remove keyboard_button actions_list">
+                                            Кнопка 2
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <a class="edit d-flex align-items-center justify-content-center mx-2 just_link"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                    <a class="remove d-flex align-items-center justify-content-center mx-2 just_link"><i
+                                                            class="bi bi-x-lg"></i></a>
+                                                    <a class="copy d-flex align-items-center justify-content-center mx-2 just_link"><i
+                                                            class="bi bi-clipboard"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="placeholder_block">
+                                        <div class="d-flex align-items-center justify-content-center w-100 h-100">
+                                            <p class="m-0">Добавьте одну или несколько кнопок для привязки к текущему
+                                                сообщению
+                                            <p>
+                                        </div>
+                                    </div>
+                                    <div class="add_button add button-keyboard">
+                                        <i class="bi bi-plus"></i>
+                                        <span>Добавить кнопку</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card_field collapsed may_remove">
+                            <div class="card-header card-collapse keyboard_card">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <i class="fa-regular fa-keyboard"></i>
+                                        <span>Клавиатура сценария (шаблон)</span>
+                                    </div>
+                                    <a class="nav-link nav-link-icon remove">
+                                        <i class="fa-regular fa-x"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="card-body collapse-div card_round">
+                                <div class="keyboards">
+                                    <div class="keyboard_button actions_list">
+                                        Кнопка 1
+                                        <div class="placeholder-button">
+                                            <div class="d-flex align-items-center justify-content-center"></div>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                            <i class="fa-regular fa-x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="keyboard_button actions_list">
+                                    Кнопка 2
+                                </div>
+                                <div class="add_button add button-keyboard">
+                                    <i class="bi bi-plus"></i>
+                                    <span>Добавить кнопку</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card_field collapsed may_remove">
+                            <div class="card-header card-collapse image_card">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <i class="fa-regular fa-image"></i>
+                                        <span>Изображение (Шаблон)</span>
+                                    </div>
+                                    <a class="nav-link nav-link-icon remove">
+                                        <i class="fa-regular fa-x"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="card-body collapse-div">
+                                <div class="editable attach_block image_block d-flex align-items-start w-100">
+                                    <div class="image_upload h-100 att_upload d-flex flex-column align-items-center  justify-content-center">
+                                        <i class="bi bi-download"></i>
+                                        <p>
+                                            Перенесите файл для загрузки
+                                        </p>
+                                        <div class="add_button add my-1 button-img w-100 add_attachment_btn">
+                                            <span>Поиск</span>
+                                        </div>
+                                        <input type="file" multiple class="attachment_input" style="display:none">
+                                    </div>
+                                    <div class=" att_upload_list left_border overflow-y ps-2  w-100">
+                                        <ui class="w-100 image_upload_list attach_upload_list">
+
+                                            <li class="sidebar-item may_remove w-100">
+                                                <div class="sidebar-link w-100 d-flex align-items-center justify-content-between ">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon_file">IMG</div>
+                                                        <div>
+                                                            <p class="att_name">test_filename.png</p>
+                                                            <p class="att_desc">
+                                                                <span>16.2</span>
+                                                                <span class="ps-1">Mb</span>
+                                                                <span class="px-1">/</span>
+                                                                <span>16.2</span> <span class="ps-1">Mb</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-2 just_link remove "><i class="bi bi-x-lg"></i></div>
+
+                                                </div>
+                                            </li>
+                                        </ui>
+                                        <div class="placeholder_block">
+                                            <div class="d-flex align-items-center justify-content-center w-100 h-100">
+                                                <p class="m-0">Добавьте одно или несколько изображений для их отправки
+                                                    пользователю
+                                                <p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer advanced-settings collapse-div ">
+                                <div class="card-action collapse_near d-flex align-items-center justify-content-center">
+                                    <i class="rot_icon bi bi-chevron-down py-1 pe-2"></i>
+                                    Расширенные настройки
+                                </div>
+                                <div class="collapse-entry hidden">
+
+                                    <div class="inline-keyboards">
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 1
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 2
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="add_button add button-keyboard">
+                                            <i class="bi bi-plus"></i>
+                                            <span>Добавить кнопку</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="card-footer collapse-div card_round">
+                                <div class="card-action collapse_near d-flex align-items-center justify-content-center">
+                                    <i class="rot_icon bi bi-chevron-down py-1 pe-2"></i>
+                                    Добавить свою клавиатуру
+                                </div>
+                                <div class="collapse-entry hidden">
+
+                                    <div class="inline-keyboards">
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 1
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 2
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="add_button add button-keyboard">
+                                            <i class="bi bi-plus"></i>
+                                            <span>Добавить кнопку</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="card_field collapsed may_remove">
+                            <div class="card-header card-collapse file_card">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <i class="bi bi-paperclip"></i>
+                                        <span>Файл</span>
+                                    </div>
+                                    <a class="nav-link nav-link-icon remove">
+                                        <i class="fa-regular fa-x"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="row m-0 card-body collapse-div">
+                                <div class="col-6 file_field">
+                                    <div class="file_element">
+                                        <div class="file_placeholder">
+                                            <i class="bi bi-cloud-arrow-up"></i>
+                                        </div>
+                                        <div class="file_text">
+                                            <span>Максимальный размер файла - 10Мб</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer advanced-settings collapse-div ">
+                                <div class="card-action collapse_near d-flex align-items-center justify-content-center">
+                                    <i class="rot_icon bi bi-chevron-down py-1 pe-2"></i>
+                                    Расширенные настройки
+                                </div>
+                                <div class="collapse-entry hidden">
+
+                                    <div class="inline-keyboards">
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 1
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 2
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="add_button add button-keyboard">
+                                            <i class="bi bi-plus"></i>
+                                            <span>Добавить кнопку</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="card-footer collapse-div card_round">
+                                <div class="card-action collapse_near d-flex align-items-center justify-content-center">
+                                    <i class="rot_icon bi bi-chevron-down py-1 pe-2"></i>
+                                    Добавить свою клавиатуру
+                                </div>
+                                <div class="collapse-entry hidden">
+
+                                    <div class="inline-keyboards">
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 1
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="keyboard_button actions_list">
+                                            Кнопка 2
+                                            <div class="placeholder-button">
+                                                <div class="d-flex align-items-center justify-content-center"></div>
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                <i class="fa-regular fa-x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="add_button add button-keyboard">
+                                            <i class="bi bi-plus"></i>
+                                            <span>Добавить кнопку</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="local_footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="buttonModal" class="hidden modal-wrapper">
+    <div class="modal-block">
+        <div class="card w-100">
+            <div class="card-header pe-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5>Редактировать кнопку</h5>
+                    <a class="nav-link close_modal nav-link-icon close">
+                        <i class="bi bi-x-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="keyboard_key" class=" my-3">
+                    <p>Название кнопки</p>
+                    <input contenteditable="true" class="fake_select"
+                           placeholder="Введите название кнопки">
+                    <span class="error_message">Кнопка с таким названием уже существует</span>
+                </div>
+                <div id="keyboard_type" class="{# error#} div_select collapsed my-3">
+                    <p>Тип ссылки</p>
+                    <div class="fake_select d-flex align-items-center justify-content-between">
+                        <span class="placeholder_div">Выберите тип ссылки</span>
+                        <i class="px-2 bi rot_icon bi-chevron-down"></i>
+                    </div>
+                    <div class="dropout-div">
+                        <ul>
+                            <li data-target="url" class="list_link">Ссылка на внешний ресурс</li>
+                            <li data-target="cart" class="list_link">Корзина</li>
+                        </ul>
+                    </div>
+                    <span class="error_message">Кнопка с таким названием уже существует</span>
+                </div>
+                <div id="keyboard_link" class="scrn may_hidden hidden div_select collapsed my-3">
+                    <p>Ссылка на экран бота</p>
+                    <div class="fake_select d-flex align-items-center justify-content-between">
+                        <span class="placeholder_div">Выберите экран бота'</span>
+                        <i class="px-2 bi rot_icon bi-chevron-down"></i>
+                    </div>
+                    <div class="dropout-div">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="url_link" class="url may_hidden hidden my-3">
+                    <p>Внешняя ссылка</p>
+                    <input class="fake_select" placeholder="Введите URL">
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="button-footer m-0 me-2  aligned-center w-100 save close_modal">Сохранить</div>
+                    <div class="button-footer m-0 ms-2 aligned-center w-100 cancel close_modal">Отменить</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="notificationsModal" class="hidden modal-wrapper">
+    <div class="modal-block">
+        <div class="card w-100">
+            <div class="card-header pe-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5>Уведомления</h5>
+                    <a class="nav-link close_modal nav-link-icon close">
+                        <i class="bi bi-x-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="m-0 p-0 modal-notification ">
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-success">
+                                    <i class="bi bi-check-lg"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <div class="text-field">
+                                        Пост добавлен в очередь и будет отправлен <span class="bold_text">13.10.2022 23:31</span>
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-error">
+                                    <i class="bi bi-x-lg"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <div class="text-field">
+                                        <div class="bold_text">Ошибка!</div>
+                                        <a class="just_link">@heelobot</a>
+                                        недоступен, подробности в личном кабинете
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-chat"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        Пришло сообщение от
+                                        <div class="bold_text">@nikityaIgorevichBelov</div>
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-chat"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        Пришло сообщение от
+                                        <div class="bold_text">@nikityaIgorevichBelov</div>
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-chat"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        Пришло сообщение от
+                                        <div class="bold_text">@nikityaIgorevichBelov</div>
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-exclamation-lg"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        <div class="bold_text">Ошибка!</div>
+                                        <a class="just_link">@heelobot</a>
+                                        недоступен, подробности в личном кабинете
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start ">
+                                <div class=" notification-icon icon-warning ">
+                                    <i class="bi bi-exclamation-lg"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        <div class="bold_text">Внимание!</div>
+                                        <a class="just_link">Товар</a>
+                                        заканчивается
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-chat"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        Пришло сообщение от
+                                        <div class="bold_text">@nikityaIgorevichBelov</div>
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-chat"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        Пришло сообщение от
+                                        <div class="bold_text">@nikityaIgorevichBelov</div>
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start">
+                                <div class="notification-icon icon-normal">
+                                    <i class="bi bi-exclamation-lg"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        <div class="bold_text">Ошибка!</div>
+                                        <a class="just_link">@heelobot</a>
+                                        недоступен, подробности в личном кабинете
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="#">
+                            <div class="notification_item d-flex align-items-start ">
+                                <div class=" notification-icon icon-warning ">
+                                    <i class="bi bi-exclamation-lg"></i>
+                                </div>
+                                <div class="ps-3">
+
+                                    <div class="text-field">
+                                        <div class="bold_text">Внимание!</div>
+                                        <a class="just_link">Товар</a>
+                                        заканчивается
+                                    </div>
+                                    <div class="additional-info text-muted">11.10.2022 08:32</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="button-footer m-0 me-2  aligned-center w-100 save close_modal">Сохранить</div>
+                    <div class="button-footer m-0 ms-2 aligned-center w-100 cancel close_modal">Отменить</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

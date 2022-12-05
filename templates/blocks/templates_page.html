@@ -1,0 +1,125 @@
+<div class="dashboard-wrapper hide-sm">
+    <div class="add_bar">
+        <div>
+            <h1 class="hide_small mb-2">Привет, {{ user }}!</h1>
+            <span>Рады тебя видеть с нами! Давай выберем бота и начнем работу/</span>
+        </div>
+
+
+    </div>
+    <div class="choice-body row justify-content-start pe-2">
+        <h4 class="mb-3 mx-2">Мои боты</h4>
+        {% for bot in bots %}
+
+
+            <a class="card_wrapper col-12 col-md-auto col-sm-12" href="/project-{{ bot.id }}/statistic">
+                <div class="card p-0 max-w-500 telegram_card_bg">
+                    <div class="d-flex align-items-center justify-content-start ">
+
+                        <div class="gradient additional_card">
+                            <span class="icon-text">{{ bot.name|slice:":2"|upper }}</span>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <div class="content-color">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="description  ms-2">
+                                        <div class="bot_name">
+
+                                            <span class="bot_link ps-1">@{{ bot.name }}</span>
+                                        </div>
+                                        {% if bot.status %}
+                                            <div class="status online px-2">
+                                                Активен
+                                            </div>
+                                        {% else %}
+                                            <div class="status offline px-2">
+                                                Остановлен
+                                            </div>
+                                        {% endif %}
+                                    </div>
+
+                                    <div class=" d-flex align-items-center justify-content-end">
+                                        <span class="description nav-link nav-link-icon">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </a>
+
+
+        {% endfor %}
+        <a data-modal="newBotModal" class="card_wrapper col-12 col-md-auto col-sm-12 modal-trigger">
+            <div class="card p-0 max-w-500 new_card_bg">
+                <div class=" gradient d-flex align-items-center justify-content-start ">
+
+
+                    <div class="card-body p-0">
+                        <div class="content-color">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="description  ms-3">
+                                    <div class="">
+
+                                        <span class="bot_link ps-1 uppercase">Создать бота</span>
+                                    </div>
+
+                                </div>
+
+                                <div class=" d-flex align-items-center justify-content-end ">
+                                        <span class=" description nav-link nav-link-icon">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </a>
+        <h4 class="my-3 mx-2">Групповые боты</h4>
+        <a data-modal="newBotModal" class="card_wrapper col-12 col-md-auto col-sm-12 modal-trigger">
+            <div class="card p-0 max-w-500 new_card_bg">
+                <div class=" gradient d-flex align-items-center justify-content-start ">
+
+
+                    <div class="card-body p-0">
+                        <div class="content-color">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="description  ms-3">
+                                    <div class="">
+
+                                        <span class="bot_link ps-1 uppercase">Создать бота</span>
+                                    </div>
+
+                                </div>
+
+                                <div class=" d-flex align-items-center justify-content-end ">
+                                        <span class=" description nav-link nav-link-icon">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </a>
+
+        <h4 class="my-3 mx-2">Видео гайды & Обучение</h4>
+
+    </div>
+
+</div>

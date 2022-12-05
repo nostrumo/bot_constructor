@@ -1,0 +1,435 @@
+<div class="dashboard-wrapper">
+    {#        <div class="row">#}
+    {#            <div class=" col-12">#}
+    {#                <div class="add_bar">#}
+    {#                    <div class="button-footer save d-flex align-items-center"><i class="bi bi-plus-lg me-2"></i> Добавить#}
+    {#                        ресурс#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="add_bar">#}
+    {#            <div>#}
+    {#                <h1 class="hide_small mb-2">Как там бот?</h1>#}
+    {#                <span class="">Здесь мы предоставляем полную статистику использования бота</span>#}
+    {##}
+    {#            </div>#}
+    {##}
+    {##}
+    {#        </div>#}
+    <div class="d-flex align-items-center my-3" id="statistic">
+        <a data-hide="overall-statistic" class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="ps-2 pe-3 my-2">Общая статистика</h4>
+
+    </div>
+    <div id="overall-statistic" class="row ps-2">
+        <div class="col-md-12 col-lg-4    h-100">
+            <div class="row  mb-3">
+                <div class="col-12 h-100  col-md-6 col-lg-12 mb-3">
+                    <div style="min-height: 200px" class="card card-blue h-100 w-100 relative card-infographic">
+                        <div class="card-header">
+                            <h5 class="">Вовлеченность</h5>
+                        </div>
+                        <div class="card-view">
+                            <div class="sm-header">
+
+                            </div>
+                            <div class="info_value">
+                                <div class="card-body">+112.3%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-plot">
+                            <div id="chart_engaje" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  h-100 col-md-6 col-lg-12">
+                    <div style="min-height: 200px" class="card card-green h-100 w-100 relative card-infographic">
+                        <div class="card-header">
+                            <h5 class="  py-3">Использование команд</h5>
+                        </div>
+                        <div class="card-view">
+                            <div class="sm-header">
+
+                            </div>
+                            <div class="info_value">
+                                <div class="card-body">+10.4%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-plot">
+                            <div id="chart_clickreate" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12   h-100 col-lg-8">
+            <div class="card  h-100">
+                <div class="card-header px-4">
+                    <h5 class="">подписчики</h5>
+                </div>
+                <div class="card-body p-0 d-flex flex-column flex-sm-column flex-lg-row flex-md-row flex-xl-row align-items-center justify-content-center ">
+                    <div id="chart" class="chart"></div>
+                    {#                                        <div style="width: 20%" id="chart_donut" class=""></div>#}
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="d-flex align-items-center">
+        <a data-hide="sm-analytic" class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="my-3 ps-2">Аналитический обзор</h4>
+    </div>
+    <div id="sm-analytic" class="row ps-2">
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg1"></div>
+                <div class="card-body ">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            24%
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Качество аудитории</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков взаимодействующих с ботом.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg4"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            100
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">отписавшиеся</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков, прекративших использование бота.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg3"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            12
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">новые пользователи</h5>
+                        <span class=" aligned-center pt-2">Количество новых пользователей бота за выбранный период</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg2"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            98
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Количество обращений</h5>
+                        <span class=" aligned-center pt-2">Общее количество обращений к боту </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden d-flex align-items-center" id="statistic-election">
+        <a data-hide="voice_analytic"  class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="my-3 ps-2">Аналитика опросов</h4>
+    </div>
+    <div id="voice_analytic" class="hidden row ps-2">
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg1"></div>
+                <div class="card-body ">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            24%
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Качество аудитории</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков взаимодействующих с ботом.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg4"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            100
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">отписавшиеся</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков, прекративших использование бота.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg3"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            12
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">новые пользователи</h5>
+                        <span class=" aligned-center pt-2">Количество новых пользователей бота за выбранный период</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg2"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            98
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Количество обращений</h5>
+                        <span class=" aligned-center pt-2">Общее количество обращений к боту </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden d-flex align-items-center" id="statistic-shop">
+        <a data-hide="shop_analytic"  class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="my-3 ps-2">Аналитика магазина</h4>
+    </div>
+    <div id="shop_analytic" class="hidden row ps-2">
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg1"></div>
+                <div class="card-body ">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            24%
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Качество аудитории</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков взаимодействующих с ботом.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg4"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            100
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">отписавшиеся</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков, прекративших использование бота.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg3"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            12
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">новые пользователи</h5>
+                        <span class=" aligned-center pt-2">Количество новых пользователей бота за выбранный период</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg2"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            98
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Количество обращений</h5>
+                        <span class=" aligned-center pt-2">Общее количество обращений к боту </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden d-flex align-items-center" id="statistic-mailing">
+        <a data-hide="mailing_analytic"  class="nav-link nav-link-icon header_hide">
+            <i class="bi bi-eye"></i>
+        </a>
+        <h4 class="my-3 ps-2">Аналитика рассылок</h4>
+    </div>
+    <div id="mailing_analytic" class="hidden row ps-2">
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg1"></div>
+                <div class="card-body ">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            24%
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Качество аудитории</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков взаимодействующих с ботом.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg4"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            100
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">отписавшиеся</h5>
+                        <span class=" aligned-center pt-2">Процент подписчиков, прекративших использование бота.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg3"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            12
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">новые пользователи</h5>
+                        <span class=" aligned-center pt-2">Количество новых пользователей бота за выбранный период</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-2 infographic">
+            <div class="card infographic">
+                <div class="rght_card_bg2"></div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-center icon-card">
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center value-card">
+                        <div class="info_value">
+                            98
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center description-card">
+                        <h5 class="pt-3  uppercase  aligned-center">Количество обращений</h5>
+                        <span class=" aligned-center pt-2">Общее количество обращений к боту </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
